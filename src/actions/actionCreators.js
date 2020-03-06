@@ -89,7 +89,7 @@ export const mediaDeleteFailure = error =>{
 export const mediaDelete = item => async dispatch => {
     dispatch(mediaDeleteRequest(item))
     try{
-        const response = await client.delete(`/media/${item}`)
+        await client.delete(`/media/${item}`)
         dispatch(mediaDeleteSuccess())
         dispatch(galleryItemsListFetch())
     }catch(error){

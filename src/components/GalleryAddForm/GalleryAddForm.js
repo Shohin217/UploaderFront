@@ -4,7 +4,7 @@ import { galleryUpload } from '../../actions/actionCreators'
 import Loader from '../Loader/Loader'
 
 export default function GalleryAddForm() {
-    const { item, loading, error } = useSelector(state => state.gallery.edit)
+    const { loading, error } = useSelector(state => state.gallery.edit)
     const dispatch = useDispatch()
     const fileRef = useRef(null)
 
